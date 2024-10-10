@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 500px; /* Increased from 100px to 500px */
 }
 
 header {
@@ -13,53 +13,100 @@ nav {
   width: 80%;
 }
 
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+  padding: 16px 30px; /* Increased padding for larger clickable area */
+  border-radius: 5px;
+  font-size: 28px; /* Significantly increased font size for navigation */
+  transition: background-color 0.3s ease;
+}
+
+nav li a:hover {
+  background-color: #e76f51;
+}
+
 nav img {
   width: 10%;
 }
 
 main {
   background-color: #e9c46a;
-  font-size: 18px;
+  font-size: 28px; /* Increased main content font size */
 }
 
 footer {
   background-color: #2a9d8f;
+  font-size: 24px; /* Increased footer font size */
 }
 
-/* Commented out the styling for the li tag */
-/* 
-li {
-  display: inline-block;
-  width: 150px;
+.skip-link {
+  position: absolute;
+  top: -1000px;
+  left: 0;
+  background-color: #2a9d8f;
+  color: white;
+  padding: 16px;
+  font-size: 24px; /* Increased size for skip link */
+  z-index: 100;
 }
-*/
+
+.skip-link:focus {
+  top: 10px;
+  left: 10px;
+}
+
+img {
+  border: 5px solid #264653;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
 
 h1 {
   text-align: center;
   font-family: 'Georgia', serif;
   color: #e76f51;
+  font-size: 50px; /* Significantly increased heading font size */
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 28px; /* Increased paragraph font size */
 }
 
-/* Grid class for two-column layout */
+/* Grid layout */
 .grid {
   display: grid;
-  grid-template-columns: 40% 40%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
   justify-content: center;
-  align-items: start;
-  row-gap: 20px;
 }
 
-.grid img {
-  width: 100%;
-}
-
-/* Flex class styling */
 .flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.flex img:nth-child(odd) {
+  border-radius: 20px;
+}
+
+.flex img:nth-child(even) {
+  border-radius: 50px;
 }
